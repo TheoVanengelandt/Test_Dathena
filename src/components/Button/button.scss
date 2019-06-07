@@ -1,0 +1,115 @@
+@import '../../../theme.scss';
+
+@mixin lightenBgColor($color) {
+    background-color: lighten($color, 20%);
+}
+
+.app-button.root {
+    border-radius: 0px;
+
+    &.whiteBg {
+        background-color: $whitePure;
+    }
+
+    &:not(.outlined) {
+        color: $black16;
+    }
+
+    &.outlined {
+        color: $black24;
+        border-width: 2px;
+    }
+
+    &.noTextTransform {
+        text-transform: none;
+    }
+
+    &.shadow {
+        box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.12), 0 3px 6px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .label {
+        &.loading {
+            height: auto;
+        }
+    }
+
+    // BLUE
+    &.blue {
+        &:not(.outlined) {
+            color: $whitePure;
+            background-color: $blue;
+        }
+
+        &.outlined {
+            border-color: $blue;
+            color: $blue;
+        }
+
+        &:hover:not(.outlined) {
+            @include lightenBgColor($blue);
+        }
+    }
+
+    // RED
+    &.red {
+        &:not(.outlined) {
+            color: $whitePure;
+            background-color: $red-brown;
+        }
+
+        &.outlined {
+            border-color: $red-brown;
+            color: $red-brown;
+        }
+
+        &:hover:not(.outlined) {
+            @include lightenBgColor($red-brown);
+        }
+    }
+
+    // GREY
+    &.grey {
+        &:not(.outlined) {
+            background-color: $warm-grey;
+        }
+
+        &.outlined {
+            border-color: $warm-grey;
+            color: $warm-grey;
+        }
+
+        &:hover:not(.outlined) {
+            @include lightenBgColor($warm-grey);
+        }
+    }
+
+    // BLACK
+    &.black {
+        &:not(.outlined) {
+            background-color: $black39;
+            color: $whitePure;
+        }
+
+        &.outlined {
+            border-color: $black39;
+            color: $black39;
+        }
+
+        &:hover:not(.outlined) {
+            @include lightenBgColor($black39);
+        }
+    }
+
+    // TRANSPARENT
+    &.transparent {
+        &.outlined {
+            border-color: $white;
+            color: $white;
+        }
+    }
+
+    &.disabled {
+        opacity: 0.7;
+    }
+}
