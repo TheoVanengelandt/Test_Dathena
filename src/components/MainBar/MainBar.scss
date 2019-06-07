@@ -1,0 +1,15 @@
+@import '../../../theme.scss';
+
+.mainbar-container {
+    display: flex;
+    flex-direction: row;
+
+    width: auto;
+    padding: 1vw 1vh;
+    background-color: $azure;
+    color: $whitePure;
+
+    &.shadow {
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+}
