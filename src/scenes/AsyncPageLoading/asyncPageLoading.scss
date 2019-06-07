@@ -1,0 +1,45 @@
+$spacingElements: 8vh;
+$black30: #302b2b;
+
+.app-async-loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .content-container {
+        margin: 15vh 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .apl-logo {
+            margin-bottom: $spacingElements;
+        }
+
+        .info-container {
+            width: 40vw;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .message {
+                text-align: center;
+
+                font-family: 1em;
+                font-size: 1em;
+                font-weight: normal;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.13;
+                letter-spacing: normal;
+                color: $black30;
+
+                margin-bottom: $spacingElements;
+            }
+        }
+    }
+}
