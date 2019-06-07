@@ -1,0 +1,30 @@
+@import '../../../theme.scss';
+
+.tiles-list-title {
+    display: flex;
+    margin: 1%;
+}
+
+.tiles-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .single-tile {
+        display: flex;
+        flex-direction: column;
+
+        width: 22vw;
+        margin: 1%;
+
+        .title {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .content {
+            text-align: center;
+            margin-top: 0;
+        }
+    }
+}
