@@ -1,0 +1,14 @@
+.app-loading-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .content-container {
+        margin: 15vh 0px;
+
+        .lp-logo {
+            margin-bottom: 10vh;
+        }
+    }
+}
