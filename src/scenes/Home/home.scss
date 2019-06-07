@@ -1,0 +1,12 @@
+@import '../../../theme.scss';
+
+.nav-title {
+    text-align: center;
+    width: auto;
+    margin: auto;
+    font-size: 1.2em;
+
+    &.upper {
+        text-transform: uppercase;
+    }
+}
