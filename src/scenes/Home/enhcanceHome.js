@@ -4,6 +4,7 @@ import { compose, lifecycle, withState } from 'recompose';
 export const enhanceHome = compose(
     withRouter,
     withState('hideClock', 'setHideClock', false),
+    withState('showDetails', 'setShowDetails', false),
     lifecycle({
         componentDidMount() {
             setInterval(() => this.setState({ date: new Date() }), 1000);

@@ -1,5 +1,42 @@
 @import '../../../theme.scss';
 
+.clock-container {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    top: 24%;
+    padding: 1vh;
+
+    &:hover {
+        background-color: $light-white;
+        border-radius: 10px;
+    }
+
+    .clock-title {
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        font-size: 1.2em;
+        margin-bottom: 1vh;
+    }
+
+    .clock-item {
+        margin: auto;
+    }
+}
+
+button.show-button.app-button {
+    display: flex;
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+
+    background-color: $whitePure;
+
+    border-radius: 10px;
+    border: 1px solid $pure-black;
+}
+
 .nav-title {
     text-align: center;
     width: auto;
@@ -11,27 +48,46 @@
     }
 }
 
-.clock-container {
-    position: absolute;
-    right: 0;
-    top: 70%;
+.main-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1%;
 
-    .clock-title {
+    .single-container {
         display: flex;
-        width: fit-content;
-        margin: auto;
-        font-size: 1.2em;
-        margin-bottom: 1vh;
+        flex-direction: column;
+        width: 48%;
+        background-color: $whitePure;
+        padding: 1% 0;
+
+        &:last-child {
+            margin-left: auto;
+        }
+
+        .title {
+            font-weight: bold;
+            margin: 0 1vw;
+        }
     }
 }
 
-button.show-button.app-button {
-    display: flex;
-    position: absolute;
-    right: 1vw;
-    top: 1vh;
-
+.single-last-container {
+    margin: 1%;
+    padding: 1%;
     background-color: $whitePure;
+
+    .title {
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 1vw;
+    }
+}
+
+button.show-details-button.app-button {
+    display: flex;
+    background-color: $whitePure;
+    margin: 1%;
 
     border-radius: 10px;
     border: 1px solid $pure-black;
