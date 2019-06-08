@@ -3,6 +3,7 @@ import './TileList.scss';
 import Card from '@material-ui/core/Card';
 import PropTypes from 'prop-types';
 import React from 'react';
+import uuidv4 from 'uuid/v4';
 
 import { Loader } from '../Loader/Loader';
 
@@ -15,7 +16,7 @@ const TileList = ({ data, Title }) => {
 
                     <div className="tiles-container">
                         {data.map(items => (
-                            <Card className="single-tile">
+                            <Card key={items.id || uuidv4()} className="single-tile">
                                 <h2 className="title">{items.name}</h2>
 
                                 {/* Display number of file if there at least on file */}
@@ -33,12 +34,12 @@ const TileList = ({ data, Title }) => {
 };
 
 TileList.propTypes = {
-    data: PropTypes.object,
+    data: PropTypes.array,
     Title: PropTypes.string,
 };
 
 TileList.defaultProps = {
-    data: {},
+    data: [],
     Title: '',
 };
 

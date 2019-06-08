@@ -10,3 +10,29 @@
         text-transform: uppercase;
     }
 }
+
+.clock-container {
+    position: absolute;
+    right: 0;
+    top: 70%;
+
+    .clock-title {
+        display: flex;
+        width: fit-content;
+        margin: auto;
+        font-size: 1.2em;
+        margin-bottom: 1vh;
+    }
+}
+
+button.show-button.app-button {
+    display: flex;
+    position: absolute;
+    right: 1vw;
+    top: 1vh;
+
+    background-color: $whitePure;
+
+    border-radius: 10px;
+    border: 1px solid $pure-black;
+}
