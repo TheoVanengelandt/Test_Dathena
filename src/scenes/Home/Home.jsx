@@ -16,27 +16,6 @@ import languageData from '../../data/language_data.json';
 import { enhanceHome } from './enhcanceHome';
 
 const Home = ({ date, hideClock, setHideClock, showDetails, setShowDetails }) => {
-    const options = names => ({
-        plotOptions: {
-            bar: {
-                horizontal: true,
-            },
-        },
-        dataLabels: {
-            enabled: false,
-        },
-        xaxis: {
-            categories: names,
-        },
-    });
-
-    const series = data => [
-        {
-            name: 'series-1',
-            data: data,
-        },
-    ];
-
     return (
         <div>
             <MainBar content="MY DASHBOARD" shadow toUpperContent />
@@ -70,17 +49,20 @@ const Home = ({ date, hideClock, setHideClock, showDetails, setShowDetails }) =>
 
                 <div className="single-container">
                     <h2 className="title">Doctype data :</h2>
-                    <PieChart data={doctypeData.map(item => [item.name, item.total_docs])} />
+                    <PieChart data={doctypeData.map(item => [item.name, item.total_docs])} donut={true} />
                 </div>
             </div>
 
             <div className="single-last-container">
                 <h2 className="title">Language data :</h2>
-                <LineChart data={languageData.map(item => [item.name, item.total_docs])} />
+                <LineChart data={languageData.map(item => [item.name, item.total_docs])} height="300px" max={426000} />
+
+                <h3 className="title">with a max of 6000 :</h3>
+                <LineChart data={languageData.map(item => [item.name, item.total_docs])} height="400px" max={6000} />
 
                 {!showDetails ? (
                     <Button onClick={() => setShowDetails(!showDetails)} classes={{ root: 'show-details-button' }}>
-                        Show Details
+                        Show More Details
                     </Button>
                 ) : (
                     <React.Fragment>
