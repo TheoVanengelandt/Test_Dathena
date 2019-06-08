@@ -61,7 +61,7 @@ For this project, i've used React and his ecosystem. (like Redux: https://www.np
 
 I've also import and edit a `theme.scss` file which contain global style (like color...) of the project
 
-## Details
+## Choices and Utilisation
 
 My Dashboard is composed of 4 charts:
 
