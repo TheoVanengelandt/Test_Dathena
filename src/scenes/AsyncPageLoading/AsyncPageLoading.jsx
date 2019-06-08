@@ -23,6 +23,7 @@ const AsyncPageLoading = ({ error, timedOut, retry }) => {
                                 Cliquez sur le bouton ci-dessous pour réessayer`}
                             />
                         </div>
+
                         <div className="retry-container">
                             <Button noTextTransform mango className="apl-button" onClick={retry}>
                                 <FormattedMessage id="app.load.error.button" defaultMessage="Réessayer" />
